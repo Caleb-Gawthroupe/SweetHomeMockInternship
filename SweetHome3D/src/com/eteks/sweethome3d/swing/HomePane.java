@@ -355,6 +355,7 @@ public class HomePane extends JRootPane implements HomeView {
         furnitureController, "toggleFurnitureSort", HomePieceOfFurniture.SortableProperty.DEPTH);
     createAction(ActionType.SORT_HOME_FURNITURE_BY_HEIGHT, preferences, 
         furnitureController, "toggleFurnitureSort", HomePieceOfFurniture.SortableProperty.HEIGHT);
+    //TODO: Task 3 create the SORT_HOME_FURNITURE_BY_VOLUME action (toggleFurnitureSort with SortableProperty.VOLUME).
     createAction(ActionType.SORT_HOME_FURNITURE_BY_X, preferences, 
         furnitureController, "toggleFurnitureSort", HomePieceOfFurniture.SortableProperty.X);
     createAction(ActionType.SORT_HOME_FURNITURE_BY_Y, preferences, 
@@ -395,6 +396,7 @@ public class HomePane extends JRootPane implements HomeView {
         furnitureController, "toggleFurnitureVisibleProperty", HomePieceOfFurniture.SortableProperty.DEPTH);
     createAction(ActionType.DISPLAY_HOME_FURNITURE_HEIGHT, preferences, 
         furnitureController, "toggleFurnitureVisibleProperty", HomePieceOfFurniture.SortableProperty.HEIGHT);
+    //TODO: Task 3 create the DISPLAY_HOME_FURNITURE_VOLUME action (toggleFurnitureVisibleProperty with SortableProperty.VOLUME).
     createAction(ActionType.DISPLAY_HOME_FURNITURE_X, preferences, 
         furnitureController, "toggleFurnitureVisibleProperty", HomePieceOfFurniture.SortableProperty.X);
     createAction(ActionType.DISPLAY_HOME_FURNITURE_Y, preferences, 
@@ -1324,6 +1326,7 @@ public class HomePane extends JRootPane implements HomeView {
         sortActions, HomePieceOfFurniture.SortableProperty.DEPTH);
     addActionToMap(ActionType.SORT_HOME_FURNITURE_BY_HEIGHT, 
         sortActions, HomePieceOfFurniture.SortableProperty.HEIGHT);
+    //TODO: Task 3 add SORT_HOME_FURNITURE_BY_VOLUME to sortActions so it appears in Furniture > Sort by and the table context menu.
     addActionToMap(ActionType.SORT_HOME_FURNITURE_BY_X, 
         sortActions, HomePieceOfFurniture.SortableProperty.X);
     addActionToMap(ActionType.SORT_HOME_FURNITURE_BY_Y, 
@@ -1427,6 +1430,7 @@ public class HomePane extends JRootPane implements HomeView {
         displayPropertyActions, HomePieceOfFurniture.SortableProperty.DEPTH);
     addActionToMap(ActionType.DISPLAY_HOME_FURNITURE_HEIGHT, 
         displayPropertyActions, HomePieceOfFurniture.SortableProperty.HEIGHT);
+    //TODO: Task 3 add DISPLAY_HOME_FURNITURE_VOLUME to displayPropertyActions so it appears in Furniture > Display column and the table context menu.
     addActionToMap(ActionType.DISPLAY_HOME_FURNITURE_X, 
         displayPropertyActions, HomePieceOfFurniture.SortableProperty.X);
     addActionToMap(ActionType.DISPLAY_HOME_FURNITURE_Y, 
@@ -2569,6 +2573,7 @@ public class HomePane extends JRootPane implements HomeView {
       furnitureViewPopup.add(createAlignOrDistributeMenu(home, preferences, true));
       addActionToPopupMenu(ActionType.RESET_FURNITURE_ELEVATION, furnitureViewPopup);
       furnitureViewPopup.addSeparator();
+      //TODO: Task 3 the context menu reuses createFurnitureSortMenu/createFurnitureDisplayPropertyMenu; verify Volume shows up here.
       furnitureViewPopup.add(createFurnitureSortMenu(home, preferences));
       furnitureViewPopup.add(createFurnitureDisplayPropertyMenu(home, preferences));
       furnitureViewPopup.addSeparator();

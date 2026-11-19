@@ -726,6 +726,7 @@ public class FurnitureTable extends JTable implements View, Printable {
   /**
    * Prints this component to make it fill <code>pageFormat</code> imageable size.
    */
+  //TODO: Task 4 the printed table must include a Level column so rows from different levels are distinguishable.
   public int print(Graphics g, PageFormat pageFormat, int pageIndex) throws PrinterException {
     // Create a printable column model from the column model of this table 
     // with printable renderers for each column
@@ -921,6 +922,7 @@ public class FurnitureTable extends JTable implements View, Printable {
           case HEIGHT : 
             writer.write(sizeFormat.format(copiedPiece.getHeight()));
             break;
+          //TODO: Task 3 add a VOLUME case for CSV export / copy (sizeFormat.format(copiedPiece.getVolume())).
           case X : 
             writer.write(sizeFormat.format(copiedPiece.getX()));
             break;
@@ -1130,6 +1132,7 @@ public class FurnitureTable extends JTable implements View, Printable {
           return preferences.getLocalizedString(FurnitureTable.class, "depthColumn");
         case HEIGHT : 
           return preferences.getLocalizedString(FurnitureTable.class, "heightColumn");
+        //TODO: Task 3 add a VOLUME case returning the localized "volumeColumn" header.
         case X : 
           return preferences.getLocalizedString(FurnitureTable.class, "xColumn");
         case Y :
@@ -1174,6 +1177,7 @@ public class FurnitureTable extends JTable implements View, Printable {
         case WIDTH :
         case DEPTH :
         case HEIGHT : 
+        //TODO: Task 3 give the VOLUME column a width (same as the other size columns).
         case X : 
         case Y :
         case ELEVATION : 
@@ -1215,6 +1219,7 @@ public class FurnitureTable extends JTable implements View, Printable {
           return getSizeRenderer(HomePieceOfFurniture.SortableProperty.DEPTH, preferences);
         case HEIGHT : 
           return getSizeRenderer(HomePieceOfFurniture.SortableProperty.HEIGHT, preferences);
+        //TODO: Task 3 add a VOLUME case returning getSizeRenderer(SortableProperty.VOLUME, preferences).
         case X : 
           return getSizeRenderer(HomePieceOfFurniture.SortableProperty.X, preferences);
         case Y :
@@ -1331,6 +1336,7 @@ public class FurnitureTable extends JTable implements View, Printable {
                     isSelected, hasFocus, row, column);
               }
             };
+        //TODO: Task 3 add a VOLUME SizeRenderer case (like HEIGHT) that renders ((HomePieceOfFurniture)value).getVolume() with length formatting.
         case HEIGHT :
           return new SizeRenderer() {
               @Override

@@ -50,6 +50,7 @@ public interface PieceOfFurniture {
   /**
    * Returns the height of this piece of furniture.
    */
+  //TODO: Task 3 consider declaring getVolume() here so catalog and home furniture share the same API.
   public abstract float getHeight();
 
   /**

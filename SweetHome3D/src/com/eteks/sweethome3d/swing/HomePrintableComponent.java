@@ -279,6 +279,7 @@ public class HomePrintableComponent extends JComponent implements Printable {
           homeName = "";
         }
         String levelName = "";
+        //TODO: Task 4 the header/footer level name should reflect the level being printed on each plan page.
         if (this.home.getSelectedLevel() != null) {
           levelName = this.home.getSelectedLevel().getName();
         }
@@ -351,6 +352,7 @@ public class HomePrintableComponent extends JComponent implements Printable {
           && (homePrint == null
               || homePrint.isPlanPrinted()
               || homePrint.isView3DPrinted())) {
+        //TODO: Task 4 print furniture on every viewable level (not just the selected one) and temporarily make the Level column visible for printing only.
         final Level selectedLevel = home.getSelectedLevel();
         furnitureTable = (FurnitureTable)furnitureView;
         furnitureFilter = furnitureTable.getFurnitureFilter();
@@ -368,6 +370,7 @@ public class HomePrintableComponent extends JComponent implements Printable {
       // Try to print next furniture view page      
       pageExists = ((Printable)furnitureView).print(g2D, pageFormat, page);
       if (furnitureTable != null) {
+        //TODO: Task 4 also restore the on-screen Level column visibility here (must not change after printing).
         // Restore previous filter
         ((FurnitureTable)furnitureView).setFurnitureFilter(furnitureFilter);
       }
@@ -380,6 +383,7 @@ public class HomePrintableComponent extends JComponent implements Printable {
     if (pageExists == NO_SUCH_PAGE 
         && planView != null 
         && (homePrint == null || homePrint.isPlanPrinted())) {
+      //TODO: Task 4 plan pages now span all levels; make sure planPageCount and the 3D view page offset still line up.
       // Try to print next plan view page
       pageExists = ((Printable)planView).print(g2D, pageFormat, page - this.furniturePageCount);
       if (pageExists == PAGE_EXISTS

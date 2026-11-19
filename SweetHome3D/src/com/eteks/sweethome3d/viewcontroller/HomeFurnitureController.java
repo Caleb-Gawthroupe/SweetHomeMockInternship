@@ -587,7 +587,6 @@ public class HomeFurnitureController implements Controller {
     return pieces;
   }
 
-  //TODO: Task 2 update the Javadoc below once DESCRIPTION is editable (only PRICE should remain non-editable).
   /**
    * Returns <code>true</code> if the given <code>property</code> is editable.
    * Depending on whether a property is editable or not, the view associated to this controller

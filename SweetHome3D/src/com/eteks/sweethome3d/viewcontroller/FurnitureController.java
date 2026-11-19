@@ -532,7 +532,7 @@ public class FurnitureController implements Controller {
               HomePieceOfFurniture.SortableProperty.WIDTH,
               HomePieceOfFurniture.SortableProperty.DEPTH,
               HomePieceOfFurniture.SortableProperty.HEIGHT,
-              //TODO: Task 3 add SortableProperty.VOLUME to this column order list (after HEIGHT) so toggling it on inserts it in the right place.
+              HomePieceOfFurniture.SortableProperty.VOLUME,
               HomePieceOfFurniture.SortableProperty.X,
               HomePieceOfFurniture.SortableProperty.Y,
               HomePieceOfFurniture.SortableProperty.ELEVATION,

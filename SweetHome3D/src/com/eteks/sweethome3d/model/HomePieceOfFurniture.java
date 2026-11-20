@@ -551,7 +551,6 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
     return this.height;
   }
 
-  //TODO: Task 3 add public float getVolume() returning getWidth() * getDepth() * getHeight().
   public float getVolume() { return getWidth() * getDepth() * getHeight();}
   /**
    * Sets the height of this piece of furniture. Once this piece is updated, 

@@ -662,7 +662,6 @@ public class MultipleLevelsPlanPanel extends JPanel implements PlanView, Printab
    * Prints the plan component.
    */
   public int print(Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException {
-    //TODO: Task 4 this delegates to PlanComponent.print, so the multi-level logic belongs there.
     return this.planComponent.print(graphics, pageFormat, pageIndex);
   }
 
